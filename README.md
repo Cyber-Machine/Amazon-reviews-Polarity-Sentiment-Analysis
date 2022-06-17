@@ -13,7 +13,7 @@ The Amazon reviews polarity dataset is constructed by taking review score 1 and 
 The files train.csv and test.csv contain all the training samples as comma-sparated values. There are 3 columns in them, corresponding to class index (1 or 2), review title and review text. The review title and text are escaped using double quotes ("), and any internal double quote is escaped by 2 double quotes (""). New lines are escaped by a backslash followed with an "n" character, that is "\n".
 
 
-### Data Preprocessing & Downsampling
+## Data Preprocessing & Downsampling
 For preprocessing the Dataset we have to apply several transformations to the entire dataset viz:
 - Removing Punctuations.  `gpp.strip_punctuation`
     - We need to remove punctuations to treat each word sentiment equally.
@@ -30,14 +30,15 @@ For preprocessing the Dataset we have to apply several transformations to the en
 
 Since the whole dataset contains 34,686,770 Amazon reviews I have to downsample the data to as it is not possible to evaluate on the whole dataset. I have downsampled the data with equal distributions of each `class` in the dataset.
 
-### Exploratory Data Analysis
+## Exploratory Data Analysis
 I have performed EDA with `TextBlob` to calculate sentiment scores and found out that there is a high correlation with sentiment of user and the `class` in which the review belong.
 
-### Sentiment Analysis with BERT model
+## Sentiment Analysis with BERT model
 Since words alone cannot define the sentiment of the user and combination of words can convey different meaning it is quite difficult to perform sentiment analysis with classical ML models. 
 
 There are many models that can generalise for sentiment analysis but I found [`BERT Experts`](https://tfhub.dev/google/experts/bert/wiki_books/sst2/2) That has been properly trained specifically for Sentiment analysis and has performed better than any other models.
 
+## Limitations and Improvements
 ### Limitations
 - I didn't trained the model on the entire dataset.
 - `Data Augmentation` was not applied.
