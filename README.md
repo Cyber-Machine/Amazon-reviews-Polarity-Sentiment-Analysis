@@ -1,6 +1,6 @@
 ## Sentiment Analysis on Amazon Reviews - Polarity
 
-This repository contains my approach for perfroming sentiment analysis on [Amazon Reviews-Polarity](https://course.fast.ai/datasets).
+This repository contains my approach for performing sentiment analysis on [Amazon Reviews-Polarity](https://course.fast.ai/datasets).
 I have performed various steps in for capturing sentiments in this dataset including data preprocessing , data downsampling , exploratory data anlysis , building and training model , evaluating model .
 
 ## About the dataset
